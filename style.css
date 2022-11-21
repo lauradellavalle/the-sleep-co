@@ -4,6 +4,33 @@
     box-sizing: border-box;
 }
 
-h1 {
-    color: red;
+/* Temporary style 
+This is helpful when starting to style the website and see what are we actually doing 
+We will remove them later */
+*{
+    padding: 0.5rem;
+    border: 1px solid rgb(225,225,225);
 }
+
+body {
+    border: none;
+}
+
+html {
+    border: none;
+}
+
+/* Image styles */
+.bg-image {
+    background-image: url(/images/the-sleep-co-1.jpg);
+    background-size: cover;
+    min-height: 20vh;
+}
+
+/* Universal style and utility classes */
+.padded { padding: 5%;}
+.padded-sm { padding: 1rem;}
+
+.bg-dark { 
+    background-color: #192b37;
+    color: white;}
