@@ -4,7 +4,7 @@
     <!-- This is the HEAD of our HTML 
     In the head we set all the information we need the browser reads but we don't need to see on the screen (extra resources and metadata)-->
     <head>
-        <title>Contact The Sleep Co</title>
+        <title>About the Sleep Co</title>
     
     <!-- Gridlex, Google Fonts.. they all need to go ABOVE my custom stylesheet! (so if we want we can override with our css) -->
     
@@ -30,37 +30,106 @@
     In the body goes what we want to display -->
     <body>
 
-        <nav>
-            <a href="/index.html">Home</a>
-            <a href="/about.html">About</a>
-            <a href="/contact.html">Contact</a>
-        </nav>
+        <header class="padded grid text-center tall-60">
 
-    <!-------------- Header, banner -------------->
-        <header class="padded grid text-center tall-100">
+            <div class="grid col-12">
+                <div  class="col-4">
+                    <a href="/index.html" class="logo"><h2>The Sleep Co</h2></a>
+                </div>
+
+                <nav class="col-8 text-right">
+                    <a href="/index.html">Home</a>
+                    <a href="/about.html">About</a>
+                    <a href="/products.html">Products</a>
+                    <a href="/contact.html">Contact</a>
+                </nav>
+            </div>
+
+
             <div class="col-12-middle">
-                <h3 class="font-weight-extrabold"><span class="featured-text">sleep</span> like a baby</h3> <!-- Just because it is bigger, it doesn't mean it must be the h1, infact, the most important thing is what defines the site which, in this case, is smaller. This distintion is important because of the SEO -->
-                <h1 class="font-weight-normal">the ultimate mattress solution</h1>
+                <h3 class="font-weight-extrabold">why <span class="featured-text">wait</span> </h3> <!-- Just because it is bigger, it doesn't mean it must be the h1, infact, the most important thing is what defines the site which, in this case, is smaller. This distintion is important because of the SEO -->
+                <h1 class="font-weight-normal">one call away from the perferct night sleep</h1>
             </div>
         </header>
 
 
 
 
+        <!-------------- Contact section ------------>
+        <section class="grid bg-dark padded">
+            <div class="col-6 padded">
+                <h2>let's <span class="featured-text">connect</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati quae voluptate exercitationem nemo, enim sed amet nobis nisi aut ea praesentium, quo, tempore libero a temporibus architecto maiores beatae. Mollitia?</p>
+            </div>
 
-    <!-------------- Footer ------------>
-    <footer class="padded grid-spaceBetween bg-dark">
-        <div class="col-5-bottom">
-            <h3 class="big-text">let's <br><span class="featured-text">connect</span></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, laborum incidunt consequuntur repellendus harum, neque reiciendis suscipit tempore deserunt magnam beatae! Ipsa dolorum iure ullam voluptas pariatur doloremque quos expedita.</p>
-        </div>
-        <div class="col-6-bottom">
-            <p><strong>Call:</strong> <a href="tel:#"> 555 5555</a></p>
-            <p><strong>Email:</strong> <a href="mailto:#">help@thesleep.co</a></p>
-            <p><strong>Store:</strong> <a href="#">55 Main St, Chicago</a></p>
-            <p><strong>Instagram:</strong> <a href="https://instagram.com/lauradellavalle">@thesleepco</a></p>
-        </div>
-    </footer>
+            <div class="col-6 padded">
+                <h2>ADD CONTACT FORM HERE</h2>
+            </div>
+
+        </section>
+
+
+        <!---- Text Section ---->
+
+        <section class="grid padded">
+            <div class="bg-image bg-dog col-6 tall-70"></div>
+
+            <div class="padded col-6-middle">
+                <h2>so <span class="featured-text">soft</span> you'll melt</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam nostrum velit, at a aspernatur, debitis minus voluptate amet animi nisi mollitia tempore fugiat, quae voluptatum exercitationem eaque possimus voluptates? Repellat.</p>
+            </div>
+        </section>
+
+
+        <!-------------- Icon section ------------>
+        <section class="padded grid-center bg-lightblue">
+            <div class="col-12 text-center"><h2>need help deciding?</h2></div>
+            <div class="padded-1 col-3">
+                <i class="fa-solid fa-cloud"></i>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, accusamus. </p>
+            </div>
+            <div class="padded-1 col-3">
+                <i class="fa-solid fa-cloud"></i>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, accusamus. </p>
+            </div>
+            <div class="padded-1 col-3">
+                <i class="fa-solid fa-cloud"></i>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, accusamus. </p>
+            </div>
+
+        </section>
+
+
+
+        <!-------------- Testimonial section ------------>
+        <section class="padded-5 grid">
+            <div class="col-1 text-right">
+                <span class="quote-icon">“</span>
+            </div>
+            <div class="col-10 text-center">
+                <p class="medium-text font-weight-light"> i've never experienced sleep like this. OMG I really love this mattress I want to buy one for every member of my </p>
+                <p class="subtitles"> - A very happy customer</p>
+            </div>
+            <div class="col-1 text-left">
+                <span class="quote-icon">”</span>
+            </div>
+        </section>
+
+
+
+        <!-------------- Footer ------------>
+        <footer class="padded grid-spaceBetween bg-dark">
+            <div class="col-5-bottom">
+                <h3 class="big-text">let's <br><span class="featured-text">connect</span></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, laborum incidunt consequuntur repellendus harum, neque reiciendis suscipit tempore deserunt magnam beatae! Ipsa dolorum iure ullam voluptas pariatur doloremque quos expedita.</p>
+            </div>
+            <div class="col-6-bottom">
+                <p><strong>Call:</strong> <a href="tel:#"> 555 5555</a></p>
+                <p><strong>Email:</strong> <a href="mailto:#">help@thesleep.co</a></p>
+                <p><strong>Store:</strong> <a href="#">55 Main St, Chicago</a></p>
+                <p><strong>Instagram:</strong> <a href="https://instagram.com/lauradellavalle">@thesleepco</a></p>
+            </div>
+        </footer>
 
     </body>
 

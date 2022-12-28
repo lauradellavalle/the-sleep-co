@@ -48,20 +48,32 @@ font-family: 'Catamaran', sans-serif;
 
 /* -------------- Image styles -------------- */
 .bg-image {
-    
+    background-color: lightgray;
     background-size: cover;
     min-height: 20vh;
     background-repeat: no-repeat;
 }
 
+.landscape      {padding-bottom: 65%;}
+.portrait       {padding-bottom: 125%;}
+.square         {padding-bottom: 100%;}
+
 /* Universal style and utility classes */
 .padded     { padding: 5%;}
-.padded-sm  { padding: 1rem;}
-.padded-lg  { padding: 5rem;}
+.padded-1  { padding: 1rem;}
+.padded-5  { padding: 5rem;}
 
 .bg-dark { 
     background-color: #192b37;
     color: white;}
+
+.bg-featured {
+    background-color: #ffbe00;
+}
+
+.bg-lightblue {
+    background-color: #e3ecf2;
+}
 
 .text-left              {text-align: left;}
 .text-right             {text-align: right;}
@@ -88,6 +100,11 @@ font-family: 'Catamaran', sans-serif;
 .font-weight-extrabold  {font-weight: 800;}
 
 /* -------------- Typography styles --------------  */
+h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    line-height: 1.1rem;
+}
+
 h2 {
     font-size: 2.5rem;
     line-height: 1.1; /* ALWAYS ADJUST LINEHEIGHT BEFORE ANY OTHER SPACE (margin..) */
@@ -157,4 +174,6 @@ footer a {
 .bg-pillow {background-image: url(/images/the-sleep-co-2.jpg);
     background-position: 50% 60%;}
 .bg-lamp {background-image: url(/images/the-sleep-co-3.jpg);}
+
+
 
