@@ -30,14 +30,14 @@
     In the body goes what we want to display -->
     <body>
 
-        <header class="padded grid text-center tall-60">
+        <header class="grid text-center tall-60">
 
-            <div class="grid col-12">
-                <div  class="col-4">
+            <div class="grid col-12-top">
+                <div  class="col-4-middle">
                     <a href="/index.html" class="logo"><h2>The Sleep Co</h2></a>
                 </div>
 
-                <nav class="col-8 text-right">
+                <nav class="col-8-middle text-right">
                     <a href="/index.html">Home</a>
                     <a href="/about.html">About</a>
                     <a href="/products.html">Products</a>
@@ -46,7 +46,7 @@
             </div>
 
 
-            <div class="col-12-middle">
+            <div class="col-12">
                 <h3 class="font-weight-extrabold">why <span class="featured-text">wait</span> </h3> <!-- Just because it is bigger, it doesn't mean it must be the h1, infact, the most important thing is what defines the site which, in this case, is smaller. This distintion is important because of the SEO -->
                 <h1 class="font-weight-normal">one call away from the perferct night sleep</h1>
             </div>
@@ -63,7 +63,12 @@
             </div>
 
             <div class="col-6 padded">
-                <h2>ADD CONTACT FORM HERE</h2>
+                <form> <!-- THE FORM ACTION will be based on what you will use to submit the form (cloudCannon..) -->
+                    <input type="text" name="_name" placeholder="Your name"> <!--  -->
+                    <input type="text" name="_replyto" placeholder="Your email"> <!-- _replyto we use this because we want this to be recognised by CloudCannon and all the other provider  -->
+                    <textarea name="message" placeholder="Tell us what you want" rows="6"></textarea>
+                    <button class="button" type="submit">SUBMIT</button>
+                </form>
             </div>
 
         </section>
