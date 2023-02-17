@@ -1,0 +1,348 @@
+/*
+colors:
+    yellow: #ffbe00
+    navy: #192b37
+ */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Temporary style 
+This is helpful when starting to style the website and see what are we actually doing 
+We will remove them later 
+Start to put a border on every element, then, once the basic HTML is set, change and put borders only on sections 
+from 
+* {
+    padding: 0.5rem;
+    border: 1px solid rgb(225,225,225);
+}
+
+body {
+    border: none;
+}
+
+html {
+    border: none;
+}
+---- to ----
+section{
+    padding: 0.5rem;
+    border: 1px solid rgb(225,225,225);
+}
+*/
+
+
+/* -------------- Style for all the site -------------- */
+
+body {
+    font-family: 'Catamaran', sans-serif;
+    color: #192b37;
+}
+
+/* Font Family
+font-family: 'Catamaran', sans-serif;
+ */ 
+
+/* -------------- Image styles -------------- */
+.bg-image {
+    background-color: lightgray;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.landscape     { padding-bottom: 66%:  }
+.portrait-tall { padding-bottom: 175%; }
+.portrait      { padding-bottom: 125%; }
+.square        { padding-bottom: 100%; }
+
+
+/* Universal style and utility classes */
+.padded     { padding: 5%;}
+.padded-1  { padding: 1rem;}
+.padded-5  { padding: 5rem;}
+
+.bg-dark { 
+    background-color: #192b37;
+    color: white;}
+
+.bg-featured {
+    background-color: #ffbe00;
+}
+
+.bg-lightblue {
+    background-color: #e3ecf2;
+}
+
+.text-left              {text-align: left;}
+.text-right             {text-align: right;}
+.text-center            {text-align: center;}
+
+.tall-50                {min-height: 50vh;}
+.tall-60                {min-height: 60vh;}
+.tall-70                {min-height: 70vh;}
+.tall-80                {min-height: 80vh;}
+.tall-90                {min-height: 90vh;}
+.tall-100               {min-height: 100vh;}
+
+.featured-text          {color: #ffbe00;}
+.white-text             {color: white;}
+.small-text             {font-size: 1.5rem;}
+.medium-text            {font-size: 2.2rem;
+                        line-height: 1.3;}
+.big-text               {font-size: 5rem;
+                        line-height: 1;}
+                        
+.font-weight-light      {font-weight: 200;}
+.font-weight-normal     {font-weight: 400;}
+.font-weight-bold       {font-weight: 500;}
+.font-weight-extrabold  {font-weight: 800;}
+
+/* -------------- Typography styles --------------  */
+h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    line-height: 1.1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    line-height: 1.1; /* ALWAYS ADJUST LINEHEIGHT BEFORE ANY OTHER SPACE (margin..) */
+    margin-bottom: 1rem;
+}
+
+p {
+    font-weight: 200;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+
+a:hover {
+    color: #ffbe00;
+}
+
+.subtitles {
+    font-size: 1.2rem;
+    color: rgb(120,120,125);
+}
+.quote-icon {
+    font-size: 6rem;
+    display: inline-block;
+    color: rgb(120,120,125);
+    line-height: 1;
+}
+
+/* -------------- Icon styles --------------  */
+/* To style icons it's mecessary to give the display: block and then we can style it as it was a text - better to use the same class font-awesome has given to target it specifically */
+.fa-solid {
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+/* -------------- Header and footer styles --------------  */
+header {
+    background-image: url(/images/the-sleep-co-4.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 5% 5%;
+}
+
+header h3{
+    font-size: 5.5rem;
+    line-height: 1;
+} 
+
+footer a {
+    border: none;
+}
+
+nav a {
+    padding: 0.5rem;
+    display: inline-block;
+    border: none;
+}
+
+.logo h2 {
+    margin-bottom: 0;
+    
+}
+
+/* -------------- Background-images --------------  */
+.bg-bed {background-image: url(/images/the-sleep-co-4.jpg);}
+.bg-dog {background-image: url(/images/the-sleep-co-1.jpg);
+    background-position: 50% 35%;}
+.bg-pillow {background-image: url(/images/the-sleep-co-2.jpg);
+    background-position: 50% 60%;}
+.bg-lamp {background-image: url(/images/the-sleep-co-3.jpg);}
+
+
+/* -------------- Form --------------  */
+input, textarea {
+    width: 100%;
+    display: block;
+    margin-bottom: 0.3rem;
+    padding: 0.5rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    border: 2px solid transparent;
+}
+/* to highlight the form when selected */
+input:focus,
+textarea:focus {
+    border: 2px solid #ffbe00;
+    outline: none; /* to remove the blue highlight when selecting the form */
+}
+
+.button {
+    padding: 0.5rem 2rem;
+    background-color:#ffbe00;
+    appearance: none; /* this helps consistency between different browsers */
+    border: 2px solid #192b37;
+    color: inherit;
+}
+
+.button:hover {
+    background-color: white;
+    color: #192b37;
+}
+
+
+
+
+
+/* General CSS Responsive Styles (Apply everywhere unless overridden) */ 
+
+.show-xs, 
+.show-sm,
+.show-md {
+	display: none;
+}
+
+/* ------- MD Media Query (64em / 1024px) --------------- */ 
+/* - Styles added here will apply at devices smaller than 576px, or zoomed in equivalent */ 
+
+@media (max-width: 64em) {
+
+    /* Adding a border to each query allow us to see when it changes
+    body { border: 2px solid green; padding: 0.5rem;} 
+    */
+
+  .show-md { display: block; }
+  .hide-md { display: none;  }
+
+
+}
+
+
+/* ------- SM Media Query (48em / 768px) --------------- */ 
+/* - Styles added here will apply at devices smaller than 768px, or zoomed in equivalent */ 
+
+@media (max-width: 48em) {
+
+    /* Adding a border to each query allow us to see when it changes
+    body { border: 2px solid blue; padding: 0.5rem;} 
+    */
+
+    html {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+
+  .show-sm { display: block; }
+  .hide-sm { display: none;  }
+	 
+  .sm-text-center   { text-align: center; }
+  .sm-text-left     { text-align: left; }
+  .sm-text-right    { text-align: right; }
+
+  .sm-padded    { padding: 5%; }
+  .sm-padded-1  { padding: 1rem; }
+  .sm-padded-05 { padding: 0.5rem; }
+
+  .sm-padded-t-0 { padding-top: 0; }
+  .sm-padded-b-0 { padding-bottom: 0; }
+  .sm-padded-l-0 { padding-left: 0; }
+  .sm-padded-r-0 { padding-right: 0; }
+  
+  .sm-margin-t-0 { margin-top: 0; }
+  .sm-margin-b-0 { margin-bottom: 0; }
+  .sm-margin-l-0 { margin-left: 0; }
+  .sm-margin-r-0 { margin-right: 0; }
+
+  .logo h2 {
+    font-size: 2rem;
+  }
+
+  header h3 {
+    font-size: 11vh;
+  }
+
+
+}
+
+/* ------- XS Media Query (36em / 576px) --------------- */ 
+/* - Styles added here will apply at devices smaller than 576px, or zoomed in equivalent */ 
+
+@media (max-width: 36em) {
+
+    /* Adding a border to each query allow us to see when it changes
+    body { border: 2px solid red; padding: 0.5rem;} 
+    */
+
+    html {
+        font-size: 12px;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+  .show-xs { display: block; }
+  .hide-xs { display: none;  }
+
+  h1 {
+    font-size: 1.4rem;
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+
+}
+
+
+/* ------- XXS Media Query (25em / 400px) --------------- */ 
+/* - Styles added here will apply at devices smaller than 400px, or zoomed in equivalent */ 
+
+@media (max-width: 25em) {
+
+    /* ADVANCE CODE - how to override a Gridlex classes and apply own style.
+    To find out the classes name use INSPECT ELEMENT, then target them and put your custom styles
+    */
+
+  [class*="grid-"] .xxs-stack {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+
+}
