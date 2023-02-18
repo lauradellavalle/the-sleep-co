@@ -220,6 +220,36 @@ textarea:focus {
 }
 
 
+/* Mobile menu Style */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.mobile-menu a {
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.mobile-menu a:first-child {
+    margin-top: 4rem;
+}
+
+.hamburger-button {
+    position: relative;
+    z-index: 2;
+}
+
+.hamburger-button i {
+    font-size: 2.2rem;
+    margin-bottom:0;
+}
+
 
 
 
@@ -227,9 +257,11 @@ textarea:focus {
 
 .show-xs, 
 .show-sm,
-.show-md {
+.show-md,
+.mobile-menu {
 	display: none;
 }
+
 
 /* ------- MD Media Query (64em / 1024px) --------------- */ 
 /* - Styles added here will apply at devices smaller than 576px, or zoomed in equivalent */ 

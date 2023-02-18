@@ -22,6 +22,9 @@
     <!-- This is our font-awesome icons, link copied from cdnjs.com-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Animate on Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- CSS stylesheet - THIS ALWAYS GOES LAST!
     link is a self closing tag, so no need to close it.
     It needs to know the relationship (which kind of file are we adding) and the location -->
@@ -35,23 +38,38 @@
 
 
 
-                <header class="grid text-center tall-60">
+                <header class="grid tall-60">
 
             <div class="grid col-12-top">
-    <div  class="col-5_sm-12-middle sm-padded-b-0">
+    <div  class="col-5_sm-11-middle sm-padded-b-0">
         <a href="/index.html" class="logo"><h2>The Sleep Co</h2></a>
     </div>
 
-    <nav class="col-7_sm-12-middle text-right sm-text-center">
+    <nav class="col-7_sm-12-middle text-right sm-text-center hide-sm">
         <a href="/index.html">Home</a>
         <a href="/about.html">About</a>
         <a href="/products.html">Products</a>
         <a href="/contact.html">Contact</a>
     </nav>
+
+    <div class="col-1">
+        <div class="hamburger-button show-sm">
+            <i class="fa-solid fas fa-bars"></i>
+        </div>
+    </div>
+
+
 </div>
 
+<nav class="mobile-menu bg-featured padded">
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/products.html">Products</a>
+    <a href="/contact.html">Contact</a>
+</nav>
 
-            <div class="col-12">
+
+            <div class="col-12 text-center">
                 <h3 class="font-weight-extrabold">why <span class="featured-text">wait</span> </h3> <!-- Just because it is bigger, it doesn't mean it must be the h1, infact, the most important thing is what defines the site which, in this case, is smaller. This distintion is important because of the SEO -->
                 <h1 class="font-weight-normal">one call away from the perferct night sleep</h1>
             </div>
@@ -145,6 +163,15 @@
                 </div>
             </footer>
     
+    <!-- Add jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Animated on scoll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Our custom Javascript file -->
+    <script src="/scripts.js"></script>
+
         </body>
     
     </html>
