@@ -1,0 +1,72 @@
+---
+layout: default
+gallery:
+ - column-size: col-6
+   aspect-ratio: square
+   background-image: /images/the-sleep-co-4.jpg
+ - column-size: col-6
+   aspect-ratio: square
+   background-image: /images/the-sleep-co-3.jpg
+ - column-size: col-12
+   aspect-ratio: landscape
+   background-image: /images/the-sleep-co-2.jpg
+ - column-size: col-4
+   aspect-ratio: landscape
+   background-image: https://images.unsplash.com/photo-1563974514898-7aea295e12fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1467&q=80
+ - column-size: col-4
+   aspect-ratio: landscape
+   background-image: https://images.unsplash.com/photo-1512781421346-e8ff1805e3ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1436&q=80
+ - column-size: col-4
+   aspect-ratio: landscape
+   background-image: https://images.unsplash.com/photo-1580580297368-c782fb65d271?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80
+---
+
+        <!-------------- Header, banner -------------->
+        <header class="grid tall-100 md-tall-80">
+
+            {% include header-nav.html %}
+
+
+            <div class="col-12 text-center editable">
+                <h3 class="font-weight-extrabold editable"><span class="featured-text">explore</span> our world</h3> <!-- Just because it is bigger, it doesn't mean it must be the h1, infact, the most important thing is what defines the site which, in this case, is smaller. This distintion is important because of the SEO -->
+                <h1 class="font-weight-normal">the ultimate mattress solution</h1>
+            </div>
+        </header>
+
+
+        <!-------------- Header, banner -------------->
+        <section class="padded">
+            <div class="gallery grid">
+
+                {% for item in page.gallery %}
+                <div class="{{item.column-size}}">
+                    <div class="bg-image {{item.aspect-ratio}}" 
+                         style="background-image: url('{{item.background-image}}');"></div>
+                </div>
+                {% endfor %}
+                
+            </div>
+
+        <!--
+            <div class="gallery grid">
+                <div class="col-6">
+                <div class="bg-image square bg-img-1"></div>
+                </div>
+                <div class="col-6">
+                <div class="bg-image square bg-img-2 bg-pos-b"></div>
+                </div>
+                <div class="col-4_xs-12">
+                <div class="bg-image portrait-tall bg-img-3"></div>
+                </div>
+                <div class="col-4_xs-12">
+                <div class="bg-image portrait-tall bg-img-4"></div>
+                </div>
+                <div class="col-4_xs-12">
+                <div class="bg-image portrait-tall "></div>
+                </div>
+                <div class="col-12">
+                <div class="bg-image landscape bg-img-5"></div>
+                </div>
+            </div>
+        -->
+         </section>

@@ -51,12 +51,22 @@ font-family: 'Catamaran', sans-serif;
     background-color: lightgray;
     background-size: cover;
     background-repeat: no-repeat;
+   /* background-image: url('https://images.unsplash.com/photo-1563974514898-7aea295e12fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1467&q=80');*/
+    background-position: center;
 }
 
-.landscape     { padding-bottom: 66%:  }
-.portrait-tall { padding-bottom: 175%; }
-.portrait      { padding-bottom: 125%; }
-.square        { padding-bottom: 100%; }
+/* Aspect Ratio */
+.landscape      { padding-bottom: 66%; }
+.landscape-wide { padding-bottom: 56%;}
+.portrait-tall  { padding-bottom: 175%; }
+.portrait       { padding-bottom: 125%; }
+.square         { padding-bottom: 100%; }
+
+/* Background Position */
+.bg-pos-t { background-position: top; }
+.bg-pos-b { background-position: bottom; }
+.bg-pos-l { background-position: left; }
+.bg-pos-r { background-position: right; }
 
 
 /* Universal style and utility classes */
@@ -154,7 +164,7 @@ a:hover {
 
 /* -------------- Header and footer styles --------------  */
 header {
-    background-image: url(/images/the-sleep-co-4.jpg);
+    background-image: url('/images/the-sleep-co-4.jpg');
     background-size: cover;
     background-position: center;
     padding: 5% 5%;
@@ -181,12 +191,18 @@ nav a {
 }
 
 /* -------------- Background-images --------------  */
-.bg-bed {background-image: url(/images/the-sleep-co-4.jpg);}
-.bg-dog {background-image: url(/images/the-sleep-co-1.jpg);
+.bg-bed {background-image: url('/images/the-sleep-co-4.jpg');}
+.bg-dog {background-image: url('/images/the-sleep-co-1.jpg');
     background-position: 50% 35%;}
-.bg-pillow {background-image: url(/images/the-sleep-co-2.jpg);
+.bg-pillow {background-image: url('/images/the-sleep-co-2.jpg');
     background-position: 50% 60%;}
-.bg-lamp {background-image: url(/images/the-sleep-co-3.jpg);}
+.bg-lamp {background-image: url('/images/the-sleep-co-3.jpg');}
+
+
+/* -------------- Image Gallery --------------  */
+.gallery [class*="col-"] {
+    padding: 0.5%;
+}
 
 
 /* -------------- Form --------------  */
