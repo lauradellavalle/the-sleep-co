@@ -51,7 +51,7 @@ font-family: 'Catamaran', sans-serif;
     background-color: lightgray;
     background-size: cover;
     background-repeat: no-repeat;
-   /* background-image: url('https://images.unsplash.com/photo-1563974514898-7aea295e12fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1467&q=80');*/
+    background-image: url('https://images.unsplash.com/photo-1563974514898-7aea295e12fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1467&q=80');
     background-position: center;
 }
 
@@ -204,6 +204,19 @@ nav a {
     padding: 0.5%;
 }
 
+.gallery .gallery-item {
+    border-bottom: none;
+}
+/* custom style from lightgallery - background of gallery when active */
+.lg-backdrop {
+    background-color: rgb(60,60,60);
+}
+.lg-backdrop.in {
+    opacity: 0.9;
+}
+.lg-sub-html {
+    background-color: rgba(60,60,60,0.9)
+}
 
 /* -------------- Form --------------  */
 input, textarea {

@@ -1,24 +1,32 @@
 ---
 layout: default
+popup-gallery: true
+gallery-background: Dark Background
 gallery:
  - column-size: col-6
    aspect-ratio: square
    background_image: /images/the-sleep-co-4.jpg
+   type: dog
  - column-size: col-6
    aspect-ratio: square
    background_image: /images/the-sleep-co-3.jpg
+   type: cat
  - column-size: col-12
    aspect-ratio: landscape
    background_image: /images/the-sleep-co-2.jpg
+   type: dog
  - column-size: col-4
    aspect-ratio: landscape
    background_image: https://images.unsplash.com/photo-1563974514898-7aea295e12fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1467&q=80
+   type: becky
  - column-size: col-4
    aspect-ratio: landscape
    background_image: https://images.unsplash.com/photo-1512781421346-e8ff1805e3ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1436&q=80
+   type: becky
  - column-size: col-4
    aspect-ratio: landscape
    background_image: https://images.unsplash.com/photo-1580580297368-c782fb65d271?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80
+   type: becky
 ---
 
         <!-------------- Header, banner -------------->
@@ -35,7 +43,55 @@ gallery:
 
 
         <!-------------- Header, banner -------------->
+        {% if page.popup-gallery == true %}
+        <section class="padded
+        {% if page.gallery-background == 'Dark Background' %} bg-dark {% endif %}">
+
+            <h2>Popup Gallery</h2>
+            <div class="gallery grid" id="lightgallery">
+
+                {% for item in page.gallery %}
+                {% if item.type != 'becky' %} <!-- {% if item.type == 'becky' %}  oppure {% if item.type == 'becky' or item.type == 'dog' %}-->
+                <a class="{{item.column-size}} gallery-item" href="{{item.background_image}}">
+                    <div class="bg-image {{item.aspect-ratio}}" 
+                         style="background-image: url('{{item.background_image}}');"></div>
+                </a>
+
+                {% endif %}
+                {% endfor %}
+                
+            </div>
+
+
+
+            <!-- Gallery trigged by a button - usefull for showing the word -->
+            <div class="gallery grid" id="lightgallery-2">
+
+                
+                <a class="button" href="https://images.unsplash.com/photo-1563974514898-7aea295e12fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1467&q=80" title="squalo balena blu">
+                    View our Work
+                </a>
+                <a class="" href="https://images.unsplash.com/photo-1512781421346-e8ff1805e3ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1436&q=800" title="squalo naso lungo">
+                </a>
+                <a class="" href="https://images.unsplash.com/photo-1563974514898-7aea295e12fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1467&q=80" title="squalo balena blu becky">
+                </a>
+                <a class="" href="https://images.unsplash.com/photo-1580580297368-c782fb65d271?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" title="squalo balena blu di profilo">
+                </a>
+                
+                
+            </div>
+
+
+
+
+        </section>
+
+        {% else %}
+
+        <!-- Stamdard gallery jekyll -->
+
         <section class="padded">
+            <h2>Standard Gallery</h2>
             <div class="gallery grid">
 
                 {% for item in page.gallery %}
@@ -46,7 +102,9 @@ gallery:
                 {% endfor %}
                 
             </div>
+        </section>
 
+        {% endif %}
         <!--
             <div class="gallery grid">
                 <div class="col-6">
